@@ -48,7 +48,8 @@ For your second milestone, explain what you've worked on since your previous mil
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-For my first milestone, I'm working on getting the motors working. This project is a robotic car controlled by hand gestures. This project involves integrating DC motors, an H-Bridge for motor direction control, an Arduino Uno R3 for signal processing, and a Bluetooth module for wireless communication with a controller. So far, I've successfully set up the Arduino and H-Bridge, and I've made progress in programming basic motor functions. However, my main challenge was coding because I had no prior experience. Moving forward, my plan is to focus on getting the Bluetooth module operational to establish communication between the controller and the robot. 
+
+  For my first milestone, I'm working on getting the motors working. This project is a robotic car controlled by hand gestures. This project involves integrating DC motors, an H-Bridge for motor direction control, an Arduino Uno R3 for signal processing, and a Bluetooth module for wireless communication with a controller. So far, I've successfully set up the Arduino and H-Bridge, and I've made progress in programming basic motor functions. However, my main challenge was coding because I had no prior experience. Moving forward, my plan is to focus on getting the Bluetooth module operational to establish communication between the controller and the robot. 
 
 
 # Schematics 
