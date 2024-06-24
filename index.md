@@ -35,7 +35,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tHdXrODQ0GA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I was able to get both Bluetooth to connect. I had to ensure a stable connection and follow the correct wiring layouts for the Micro and Uno Bluetooth. What has been surprising is building this car showed me how powerful coding is. Before this program, I always viewed coding as something that's only associated with software, however now I know that coding makes machines move. This process was smooth and there weren't any obstacles I faced. I need to get the accelerometer connected which would be the final step for building the gesture-controlled robot
+For my second milestone, I got both Bluetooth to connect. I had to ensure a stable connection and follow the correct wiring layouts for the Micro and Uno Bluetooth. What has been surprising is building this car showed me how powerful coding is. Before this program, I always viewed coding as something that's only associated with software, however, now I know that coding makes machines move. This process was smooth and there weren't any obstacles I faced. My next step is to get the accelerometer to work which would be the final step for building the gesture-controlled robot
 
 # First Milestone
 
