@@ -21,12 +21,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
-
+For my third and final milestone, I connected the accelerometer to the Arduino micro allowing for the controller to detect gestures. My biggest challenge was the coding aspect due to my lack of experience; my greatest triumph was honestly finishing the main project a couple of days before demo night despite having a couple of challenges. The key topics I learned were the importance of learning how to communicate with an audience as well as learning more about different types of engineering. I hope that I learn what it takes to create something truly innovative in the future. 
 
 
 # Second Milestone
