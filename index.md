@@ -49,36 +49,30 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-...
+```cpp
 #include <SoftwareSerial.h>
-
 
 #define tx 8
 #define rx 9
 
-
 SoftwareSerial configBt(rx, tx);
 long tm, t, d; // variables to record time in seconds
-
 
 const int Aclockwise = 12;
 const int AcounterClock = 13;
 const int Bclockwise = 6;
 const int BcounterClock = 7;
 
-
 const int Cclockwise = 4;
 const int CcounterClock = 5;
 const int Dclockwise = 2;
 const int DcounterClock = 3;
-
 
 void setup() {
   Serial.begin(38400);
   configBt.begin(38400);
   pinMode(tx, OUTPUT);
   pinMode(rx, INPUT);
-
 
   pinMode(Aclockwise, OUTPUT);
   pinMode(AcounterClock, OUTPUT);
@@ -90,9 +84,7 @@ void setup() {
   pinMode(DcounterClock, OUTPUT);
 }
 
-
 char c; // declare c as a global variable
-
 
 void loop()
 {
@@ -103,7 +95,6 @@ void loop()
     //prints to serial
     Serial.println(c);
   }
-
 
   //acts based on character
   switch(c){
@@ -134,9 +125,6 @@ void loop()
   }
 }
 
-
-
-
 void moveForward() {
   // Move forward by setting motors appropriately
   digitalWrite(Aclockwise, HIGH);
@@ -148,7 +136,6 @@ void moveForward() {
   digitalWrite(Dclockwise, LOW);
   digitalWrite(DcounterClock, HIGH);
 }
-
 
 void moveBackward() {
   // Move backward by reversing motor directions
@@ -162,7 +149,6 @@ void moveBackward() {
   digitalWrite(DcounterClock, LOW);
 }
 
-
 void turnLeft() {
   // Turn left by adjusting motor directions
   digitalWrite(Aclockwise, LOW);
@@ -174,7 +160,6 @@ void turnLeft() {
   digitalWrite(Dclockwise, LOW);
   digitalWrite(DcounterClock, HIGH);
 }
-
 
 void turnRight() {
   // Turn right by adjusting motor directions
@@ -188,7 +173,6 @@ void turnRight() {
   digitalWrite(DcounterClock, LOW);
 }
 
-
 void freeze() {
   // Stationary
   digitalWrite(Aclockwise, LOW);
@@ -200,24 +184,17 @@ void freeze() {
   digitalWrite(Dclockwise, LOW);
   digitalWrite(DcounterClock, LOW);
 }
- 
-
-
 
 #include <Wire.h>
 
-
 #define MPU6050_ADDRESS 0x68
 
-
 int16_t accelerometerX, accelerometerY, accelerometerZ;
-
 
 void setup()
 {
   Wire.begin();
   Serial1.begin(38400);
-
 
   // Initialize MPU6050
   Wire.beginTransmission(MPU6050_ADDRESS);
@@ -225,10 +202,8 @@ void setup()
   Wire.write(0);     // set to zero (wakes up the MPU6050)
   Wire.endTransmission(true);
 
-
   delay(100); // Delay to allow MPU6050 to stabilize
 }
-
 
 void loop()
 {
@@ -237,7 +212,6 @@ void loop()
   delay(500);
 }
 
-
 void readAccelerometerData()
 {
   Wire.beginTransmission(MPU6050_ADDRESS);
@@ -245,13 +219,11 @@ void readAccelerometerData()
   Wire.endTransmission(false);
   Wire.requestFrom(MPU6050_ADDRESS, 6, true);  // request a total of 6 registers
 
-
   // read accelerometer data
   accelerometerX = Wire.read() << 8 | Wire.read();
   accelerometerY = Wire.read() << 8 | Wire.read();
   accelerometerZ = Wire.read() << 8 | Wire.read();
 }
-
 
 void determineGesture()
 {
@@ -273,10 +245,10 @@ void determineGesture()
   }
   else {
     Serial1.write('S');
-    Serial.println('s');
+    Serial.println('S');
   }
 }
-
+```
 ```
 
 # Bill of Materials
