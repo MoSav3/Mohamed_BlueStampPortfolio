@@ -49,17 +49,233 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
+#include <SoftwareSerial.h>
+
+
+#define tx 8
+#define rx 9
+
+
+SoftwareSerial configBt(rx, tx);
+long tm, t, d; // variables to record time in seconds
+
+
+const int Aclockwise = 12;
+const int AcounterClock = 13;
+const int Bclockwise = 6;
+const int BcounterClock = 7;
+
+
+const int Cclockwise = 4;
+const int CcounterClock = 5;
+const int Dclockwise = 2;
+const int DcounterClock = 3;
+
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+
+
+  pinMode(Aclockwise, OUTPUT);
+  pinMode(AcounterClock, OUTPUT);
+  pinMode(Bclockwise, OUTPUT);
+  pinMode(BcounterClock, OUTPUT);
+  pinMode(Cclockwise, OUTPUT);
+  pinMode(CcounterClock, OUTPUT);
+  pinMode(Dclockwise, OUTPUT);
+  pinMode(DcounterClock, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
 
+char c; // declare c as a global variable
+
+
+void loop()
+{
+  //checks for Bluetooth data
+  if (configBt.available()){
+    //if available stores to command character
+    c = (char)configBt.read();
+    //prints to serial
+    Serial.println(c);
+  }
+
+
+  //acts based on character
+  switch(c){
+    //forward case
+    case 'F':
+      moveForward();
+      break;
+     
+    //left case
+    case 'L':
+      turnLeft();
+      break;
+     
+    //right case
+    case 'R':
+      turnRight();
+      break;
+     
+    //back case
+    case 'B':
+      moveBackward();
+      break;
+     
+    //default is to stop robot
+    case 'S':
+      freeze();
+      break;
+  }
 }
+
+
+
+
+void moveForward() {
+  // Move forward by setting motors appropriately
+  digitalWrite(Aclockwise, HIGH);
+  digitalWrite(AcounterClock, LOW);
+  digitalWrite(Bclockwise, HIGH);
+  digitalWrite(BcounterClock, LOW);
+  digitalWrite(Cclockwise, LOW);
+  digitalWrite(CcounterClock, HIGH);
+  digitalWrite(Dclockwise, LOW);
+  digitalWrite(DcounterClock, HIGH);
+}
+
+
+void moveBackward() {
+  // Move backward by reversing motor directions
+  digitalWrite(Aclockwise, LOW);
+  digitalWrite(AcounterClock, HIGH);
+  digitalWrite(Bclockwise, LOW);
+  digitalWrite(BcounterClock, HIGH);
+  digitalWrite(Cclockwise, HIGH);
+  digitalWrite(CcounterClock, LOW);
+  digitalWrite(Dclockwise, HIGH);
+  digitalWrite(DcounterClock, LOW);
+}
+
+
+void turnLeft() {
+  // Turn left by adjusting motor directions
+  digitalWrite(Aclockwise, LOW);
+  digitalWrite(AcounterClock, HIGH);
+  digitalWrite(Bclockwise, LOW);
+  digitalWrite(BcounterClock, HIGH);
+  digitalWrite(Cclockwise, LOW);
+  digitalWrite(CcounterClock, HIGH);
+  digitalWrite(Dclockwise, LOW);
+  digitalWrite(DcounterClock, HIGH);
+}
+
+
+void turnRight() {
+  // Turn right by adjusting motor directions
+  digitalWrite(Aclockwise, HIGH);
+  digitalWrite(AcounterClock, LOW);
+  digitalWrite(Bclockwise, HIGH);
+  digitalWrite(BcounterClock, LOW);
+  digitalWrite(Cclockwise, HIGH);
+  digitalWrite(CcounterClock, LOW);
+  digitalWrite(Dclockwise, HIGH);
+  digitalWrite(DcounterClock, LOW);
+}
+
+
+void freeze() {
+  // Stationary
+  digitalWrite(Aclockwise, LOW);
+  digitalWrite(AcounterClock, LOW);
+  digitalWrite(Bclockwise, LOW);
+  digitalWrite(BcounterClock, LOW);
+  digitalWrite(Cclockwise, LOW);
+  digitalWrite(CcounterClock, LOW);
+  digitalWrite(Dclockwise, LOW);
+  digitalWrite(DcounterClock, LOW);
+}
+ 
+
+
+
+#include <Wire.h>
+
+
+#define MPU6050_ADDRESS 0x68
+
+
+int16_t accelerometerX, accelerometerY, accelerometerZ;
+
+
+void setup()
+{
+  Wire.begin();
+  Serial1.begin(38400);
+
+
+  // Initialize MPU6050
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x6B);  // PWR_MGMT_1 register
+  Wire.write(0);     // set to zero (wakes up the MPU6050)
+  Wire.endTransmission(true);
+
+
+  delay(100); // Delay to allow MPU6050 to stabilize
+}
+
+
+void loop()
+{
+  readAccelerometerData();
+  determineGesture();
+  delay(500);
+}
+
+
+void readAccelerometerData()
+{
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x3B);  // starting with register 0x3B (ACCEL_XOUT_H)
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDRESS, 6, true);  // request a total of 6 registers
+
+
+  // read accelerometer data
+  accelerometerX = Wire.read() << 8 | Wire.read();
+  accelerometerY = Wire.read() << 8 | Wire.read();
+  accelerometerZ = Wire.read() << 8 | Wire.read();
+}
+
+
+void determineGesture()
+{
+  if (accelerometerY >= 6500) {
+    Serial1.write('F');
+    Serial.println('F');
+  }
+  else if (accelerometerY <= -4000) {
+    Serial1.write('B');
+    Serial.println('B');
+  }
+  else if (accelerometerX <= -3250) {
+    Serial1.write('L');
+    Serial.println('L');
+  }
+  else if (accelerometerX >= 3250) {
+    Serial1.write('R');
+    Serial.println('R');
+  }
+  else {
+    Serial1.write('S');
+    Serial.println('s');
+  }
+}
+
 ```
 
 # Bill of Materials
