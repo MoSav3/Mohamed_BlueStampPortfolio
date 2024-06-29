@@ -6,8 +6,6 @@ Imagine commanding a robot with just a wave of your hand—no buttons, no remote
 |:--:|:--:|:--:|:--:|
 | Mohamed S | The Urban Assembly for Law and Justice | Mechancial Engineering | Incoming Senior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
 ![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/36340d3c-ab89-42c7-9f2b-1783278d0c6f)
 
   
