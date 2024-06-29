@@ -1,11 +1,6 @@
 Gesture controlled robot
 Imagine commanding a robot with just a wave of your hand—no buttons, no remotes, just pure intuitive control. This robot turns your gestures into an extraordinary interactive experience.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -17,24 +12,18 @@ You should comment out all portions of your portfolio that you have not complete
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v_w25taoswc" frameborder="0" allowfullscreen></iframe>
 
 For my third and final milestone, I connected the accelerometer to the Arduino micro allowing for the controller to detect gestures. My biggest challenge was the coding aspect due to my lack of experience; my greatest triumph was honestly finishing the main project a couple of days before demo night despite having a couple of challenges. The key topics I learned were the importance of learning how to communicate with an audience as well as learning more about different types of engineering. I hope that I learn what it takes to create something truly innovative in the future. 
 
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tHdXrODQ0GA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For my second milestone, I got both Bluetooth to connect. I had to ensure a stable connection and follow the correct wiring layouts for the Micro and Uno Bluetooth. What has been surprising is building this car showed me how powerful coding is. Before this program, I always viewed coding as something that's only associated with software, however, now I know that coding makes machines move. This process was smooth and there weren't any obstacles I faced. My next step is to get the accelerometer to work which would be the final step for building the gesture-controlled robot
 
 # First Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to YouTube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HGaoFZ29CbI?si=uWr7Lsl0iQ7C_Clm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
