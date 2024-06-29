@@ -31,8 +31,10 @@ For my second milestone, I got both Bluetooth to connect. I had to ensure a stab
   For my first milestone, I'm working on getting the motors working. This project is a robotic car controlled by hand gestures. This project involves integrating DC motors, an H-Bridge for motor direction control, an Arduino Uno R3 for signal processing, and a Bluetooth module for wireless communication with a controller. So far, I've successfully set up the Arduino and H-Bridge, and I've made progress in programming basic motor functions. However, my main challenge was coding because I had no prior experience. Moving forward, my plan is to focus on getting the Bluetooth module operational to establish communication between the controller and the robot. 
 
 
-# Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+# The layout of the circuit board 
+![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/bd1fa599-0e34-4795-922f-5005b7accd38)
+![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/c71343ad-0184-4d0e-8327-74e2337f09b8)
+
 
 # Code 
 
