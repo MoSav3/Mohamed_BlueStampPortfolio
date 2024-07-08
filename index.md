@@ -32,7 +32,8 @@ For my second milestone, I got both Bluetooth to connect. I had to ensure a stab
 
 # The layout of the circuit board 
 ![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/bd1fa599-0e34-4795-922f-5005b7accd38)
-![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/c71343ad-0184-4d0e-8327-74e2337f09b8)
+![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/83d81435-89a3-486e-8105-770c466c08d3)
+
 
 
 # Code 
