@@ -4,7 +4,7 @@ Imagine commanding a robot with just a wave of your hand—no buttons, no remote
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Mohamed S | The Urban Assembly for Law and Justice | Electrical Engineering  | Incoming Senior
+| Mohamed S | The Urban Assembly for Law and Justice | Computer Engineering  | Incoming Senior
 
 ![image](https://github.com/MoSav3/Mohamed_BlueStampPortfolio/assets/172443073/d63a93f6-da47-4886-a0cc-9480bcccd9d3)
   
