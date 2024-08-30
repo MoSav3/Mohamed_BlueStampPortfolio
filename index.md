@@ -1,5 +1,5 @@
 Gesture controlled robot
-Imagine commanding a robot with just a wave of your hand—no buttons, no remotes, just pure intuitive control. This robot turns your gestures into an extraordinary interactive experience.
+Imagine commanding a robot with just a tilt of your hand—no buttons, no remotes, just pure intuitive control. This robot turns your gestures into an extraordinary interactive experience.
 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
